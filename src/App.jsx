@@ -12,9 +12,9 @@ import Location from "./components/Location";
 function App() {
   return (
     <>
-      <div className="flex justify-center">
+      <div id="top" className="flex justify-center flex-col items-center">
         <Nav />
-        <div className="w-full h-full bg-neutral-200 xs:w-[414px] shadow-lg flex flex-col items-center pt-12">
+        <div className="w-full h-full bg-neutral-200 xs:w-[414px] shadow-lg flex flex-col items-center py-12 space-y-4">
           <div className="flex flex-col items-center pb-12 w-full">
             <h1>00 & 00</h1>
             <p>결혼합니다</p>
@@ -25,7 +25,10 @@ function App() {
 
           <Invite />
 
-          <div className="w-full bg-white flex flex-col items-center py-10 space-y-8">
+          <div
+            id="gallery"
+            className="w-full bg-white flex flex-col items-center py-10 space-y-8"
+          >
             <h1>신랑신부 사진첩</h1>
             <Gallery images={images} />
           </div>

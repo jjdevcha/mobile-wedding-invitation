@@ -3,7 +3,7 @@ import Post from "./Post";
 
 const GuestBook = () => {
   return (
-    <div className="w-[90%] flex flex-col space-y-4 items-center py-8">
+    <div id="msg" className="w-[90%] flex flex-col space-y-4 items-center py-8">
       <h1>신랑신부에게 축하메시지를 남겨주세요</h1>
       <form
         type="submit"

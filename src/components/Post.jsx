@@ -8,7 +8,8 @@ const Post = () => {
         <span>Date</span>
       </div>
       <p className="bg-neutral-200 p-4">Text</p>
-      <div className="self-end">
+      <div className="self-end flex space-x-2">
+        <button className="bg-neutral-200 py-1 px-3">수정</button>
         <button className="bg-neutral-200 py-1 px-3">삭제</button>
       </div>
     </div>

@@ -2,6 +2,18 @@ import React, { useState } from "react";
 
 const Gift = () => {
   const [buttonToggle, setButtonToggle] = useState(false);
+
+  const copyToClipboard = (text) => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        alert("Copied to clipboard: " + text);
+      })
+      .catch((error) => {
+        console.error("Failed to copy text: " + error);
+      });
+  };
+
   const buttonHandler = () => {
     setButtonToggle((prev) => !prev);
   };
@@ -21,7 +33,10 @@ const Gift = () => {
             <span>000(부)</span>
             <div className="border border-neutral-300 p-2 flex justify-between items-center">
               <span>00은행 ***-**-******</span>
-              <button className="bg-neutral-500 text-white rounded-full p-2 text-sm">
+              <button
+                onClick={() => copyToClipboard("***-**-******")}
+                className="bg-neutral-500 text-white rounded-full p-2 text-sm"
+              >
                 복사하기
               </button>
             </div>
@@ -30,7 +45,10 @@ const Gift = () => {
             <span>000(모)</span>
             <div className="border border-neutral-300 p-2 flex justify-between items-center">
               <span>00은행 ***-**-******</span>
-              <button className="bg-neutral-500 text-white rounded-full p-2 text-sm">
+              <button
+                onClick={() => copyToClipboard("***-**-******")}
+                className="bg-neutral-500 text-white rounded-full p-2 text-sm"
+              >
                 복사하기
               </button>
             </div>
@@ -39,7 +57,10 @@ const Gift = () => {
             <span>000</span>
             <div className="border border-neutral-300 p-2 flex justify-between items-center">
               <span>00은행 ***-**-******</span>
-              <button className="bg-neutral-500 text-white rounded-full p-2 text-sm">
+              <button
+                onClick={() => copyToClipboard("***-**-******")}
+                className="bg-neutral-500 text-white rounded-full p-2 text-sm"
+              >
                 복사하기
               </button>
             </div>

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { API_KEY } from "../key";
 
 const { kakao } = window;
 
@@ -41,9 +40,12 @@ const Location = () => {
     infowindow.open(map, marker);
   }, []);
   return (
-    <div className="w-[90%] flex flex-col items-center py-12 space-y-8">
+    <div
+      id="map"
+      className="w-[90%] flex flex-col items-center py-12 space-y-8"
+    >
       <h1>오시는 길</h1>
-      <div id="map" className="w-full h-80 shadow-lg"></div>
+      <div id="map" className="w-full h-60 shadow-lg"></div>
     </div>
   );
 };

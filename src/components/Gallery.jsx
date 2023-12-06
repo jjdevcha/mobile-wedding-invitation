@@ -24,7 +24,7 @@ const Gallery = ({ images }) => {
         <img key={currentIndex} src={`src/images/${images[currentIndex]}`} />
       </div>
       <svg
-        className="h-8 text-white absolute left-1 top-60"
+        className="h-8 text-white absolute left-1 top-60 cursor"
         onClick={handlePrev}
         fill="none"
         stroke="currentColor"
